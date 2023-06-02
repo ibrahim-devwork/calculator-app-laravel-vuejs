@@ -1,6 +1,6 @@
 # Calculator app by Laravel 10 & vuejs 3
 
-## Project nvironment :
+## Project environment :
     PHP version 8.1.12
     Nodejs version 18.15.0
     
