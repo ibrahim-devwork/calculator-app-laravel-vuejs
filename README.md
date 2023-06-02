@@ -11,6 +11,11 @@ First of all after cloning the project from github you need to run these command
 
     npm install
     
+## Global variables :
+You need to add this global variable in **.env** file 
+
+    VITE_API_URL=http://127.0.0.1:8000/api
+    
 ## How to run project :
 To run this project, you need to run these commands together at the same time and to be able to see the project on the browser you have to use the URL of the second command **php artisan serve**.
 
