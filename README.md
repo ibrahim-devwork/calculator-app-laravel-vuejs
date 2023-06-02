@@ -1,5 +1,9 @@
 # Calculator app by Laravel 10 & vuejs 3
 
+## Project nvironment :
+    PHP version 8.1.12
+    Nodejs version 18.15.0
+    
 ## Requirements :
 First of all after cloning the project from github you need to run these commands to install the required packages.
 
