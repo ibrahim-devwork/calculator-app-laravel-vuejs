@@ -17,20 +17,16 @@ class CalculatorController extends Controller
     /**
      * Handle the incoming request.
      */
-    private $calculatorService;
-
-    public function __construct(CalculatorService $calculatorService)
-    {
-        $this->calculatorService = $calculatorService;
-    }
 
     public function __invoke(CalculatorRequest $calculatorRequest)
     {
         try {
 
-            $data   = $calculatorRequest->validated();
-            $result = $this->calculatorService->calculator($this->buildCalculator($data['operation']), $data['first_number'], $data['second_number']);
-            return response()->json(["result" => $result], 200);
+            $data       = $calculatorRequest->validated();
+            $calculator = new CalculatorService();
+            $calculator->setOperation($this->buildCalculator($data['operation']));
+            $result = $calculator->calculate($data['first_number'], $data['second_number']);
+            return response()->json( ["result" => $result ], 200);
             
         } catch(Exception $error) {
             Log::error($error->getMessage());
